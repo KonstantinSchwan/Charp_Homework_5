@@ -60,7 +60,14 @@ void Findnumbers(int[] numbers, int num)
   else Console.WriteLine("Такого числа нет");
 }
 
-
+void FillArraythirty(int[] nums)
+ {
+    Random rnd = new Random();
+    for (int i = 0; i < nums.Length; i++)
+    {
+        nums[i] = rnd.Next(100, 1000);
+    }
+}
 //Задача 34:    Задайте массив заполненный случайными положительными трёхзначными числами. 
 //              Напишите программу, которая покажет количество чётных чисел в массиве.
 //              [345, 897, 568, 234] -> 2
@@ -68,7 +75,7 @@ void Task34()
 {Console.WriteLine("Введите размер массива ");
 int size = Convert.ToInt32(Console.ReadLine());
 int[] numbers = new int[size];
-FillArray(numbers);
+FillArraythirty(numbers);
 PrintArray(numbers);
 int count = 0;
 
